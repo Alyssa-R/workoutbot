@@ -1,0 +1,31 @@
+[
+  {
+    "name": "jumping jacks",
+    "type": "WARM_UP"
+  },
+  {
+    "name": "push ups",
+    "type": "ARMS_SHOULDERS"
+  },
+  {
+    "name": "upright rows",
+    "type": "BACK"
+  },
+  {
+    "name": "goblet squats",
+    "type": "LEGS_GLUTES"
+  },
+  {
+    "name": "Lumberjack twists",
+    "type": "FULL_BODY_WITH_WEIGHT"
+  },
+  {
+    "name": "plank",
+    "type": "CORE_FRONT"
+  },
+  {
+    "name": "side plank",
+    "type": "CORE_SIDE"
+  }
+
+]

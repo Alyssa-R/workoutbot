@@ -1,0 +1,31 @@
+WorkoutBot MVP flow:
+- Run workoutbot
+- Workoutbot randomly generates four supersets of two exercises
+    - Within the superset, the two exercises target different muscle groups
+    - Workoutbot will not assign reps to the workout
+- Workoutbot returns the workout and instructions in a well-formatted text file
+
+class class enum
+APPLICAOTN
+@springbootapplication
+@configurationproertiesscan
+
+fun main
+    runApplication
+}
+
+CONTROLLER
+@Controller
+class FICOntroller(
+    findimpressionscommandfactory, eventrecorder, mapper
+){
+    @PostMapping(blahbalh)
+    fun findImpressions(abc){
+    create and execute findimpressionsCommand
+    }
+
+}
+
+NAMESPACESERVICE
+@service
+
