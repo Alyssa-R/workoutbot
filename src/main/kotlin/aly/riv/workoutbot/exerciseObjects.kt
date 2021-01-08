@@ -18,15 +18,18 @@ data class Exercise(var name: String = "empty", var type: ExerciseType = Exercis
 // set of exercises grouped together. None have the same type
 class SuperSet(val size: Int) {
     var exercises = mutableListOf<Exercise>()
+    var fullSet : Boolean = false
 
     // adds exercise to list and returns true if exersise of same type not already in list
-    fun add(exercise: Exercise): Boolean{
+    fun add(exercise: Exercise){
         if ((exercises.size < size) && typeNotInSuperSet(exercise.type)) {
             exercises.add(exercise)
-            return true
-        } else
-        throw Exception("SuperSet already full: size $size. Exercise ${exercise.name} failed to add")
-        // return false
+        }
+        if (exercises.size == size) {
+            fullSet = true
+        }
+        //throw Exception("SuperSet already full: size $size. Exercise ${exercise.name} failed to add")
+
     }
 
     fun typeNotInSuperSet(exerciseType: ExerciseType) : Boolean {

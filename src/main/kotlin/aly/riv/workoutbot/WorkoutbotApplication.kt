@@ -17,11 +17,11 @@ fun main(args: Array<String>) {
 }
 
 @RestController
-class WorkoutGenerator(
+class ArnoldController(
     val exerciseManager: ExerciseManager
 ){
     @GetMapping("/getpumped", produces = ["application/json"])
-    fun makeWorkout() : Int { //todo needs to return mvcview
-        return exerciseManager.size()
+    fun assignWorkout() : WorkoutPlan { //todo needs to return mvcview
+        return exerciseManager.generateWorkoutPlan(numSuperSets = 4, numExercisesPerSuperSet = 3)
     }
 }

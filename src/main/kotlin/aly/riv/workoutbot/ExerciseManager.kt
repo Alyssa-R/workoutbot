@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Component
 import java.io.File
+import kotlin.math.floor
 
 @Component
 class ExerciseManager(
@@ -22,6 +23,29 @@ class ExerciseManager(
     fun size(): Int {
         return allExercises.size
     }
-    // todo makeSuperSet(size)
-    // todo makeWorkoutPlan
+
+    private fun getRandomExercise(): Exercise {
+        val rand = floor((Math.random() * allExercises.size)).toInt()
+        //return allExercises[rand]
+        return allExercises.random()
+    }
+
+    // feels like this should live somewhere else
+    fun generateWorkoutPlan(numSuperSets: Int, numExercisesPerSuperSet: Int): WorkoutPlan{
+        var wap = WorkoutPlan(numSuperSets)
+
+        // build superset
+        // todo: buggy, if same type pulled then addExersiseToSuperSet returns false and loop stops adding to superset
+        for (i in 1..numSuperSets){
+            var newSuperSet = SuperSet(numExercisesPerSuperSet)
+            var setHasRoom = true
+            while (! newSuperSet.fullSet) {
+                newSuperSet.add(getRandomExercise())
+                //setHasRoom = newSuperSet.add(getRandomExercise())
+            }
+            wap.addSuperSet(newSuperSet)
+        }
+
+        return wap
+    }
 }
