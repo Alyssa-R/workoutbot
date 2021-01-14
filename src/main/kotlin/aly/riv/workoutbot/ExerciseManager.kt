@@ -25,14 +25,12 @@ class ExerciseManager(
     }
 
     private fun getRandomExercise(): Exercise {
-        val rand = floor((Math.random() * allExercises.size)).toInt()
-        //return allExercises[rand]
         return allExercises.random()
     }
 
     // feels like this should live somewhere else
     fun generateWorkoutPlan(numSuperSets: Int, numExercisesPerSuperSet: Int): WorkoutPlan{
-        var wap = WorkoutPlan(numSuperSets)
+        val wap = WorkoutPlan(numSuperSets)
 
         // build superset
         // todo: buggy, if same type pulled then addExersiseToSuperSet returns false and loop stops adding to superset

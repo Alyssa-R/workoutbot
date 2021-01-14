@@ -1,31 +1,38 @@
 [
   {
     "name": "jumping jacks",
-    "type": "WARM_UP"
+    "type": "WARM_UP",
+    "weightType": "BODYWEIGHT_ONLY"
   },
   {
     "name": "push ups",
-    "type": "ARMS_SHOULDERS"
+    "type": "ARMS_SHOULDERS",
+    "weightType": "BODYWEIGHT_ONLY"
   },
   {
     "name": "upright rows",
-    "type": "BACK"
+    "type": "BACK",
+    "weightType": "WEIGHT_REQUIRED"
   },
   {
     "name": "goblet squats",
-    "type": "LEGS_GLUTES"
+    "type": "LEGS_GLUTES",
+    "weightType": "WEIGHT_REQUIRED"
   },
   {
     "name": "Lumberjack twists",
-    "type": "FULL_BODY_WITH_WEIGHT"
+    "type": "FULL_BODY",
+    "weightType": "WEIGHT_OPTIONAL"
   },
   {
     "name": "plank",
-    "type": "CORE_FRONT"
+    "type": "CORE_FRONT",
+    "weightType": "BODYWEIGHT_ONLY"
   },
   {
     "name": "side plank",
-    "type": "CORE_SIDE"
+    "type": "CORE_SIDE",
+    "weightType": "BODYWEIGHT_ONLY"
   }
 
 ]
