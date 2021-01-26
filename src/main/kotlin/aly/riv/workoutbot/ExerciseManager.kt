@@ -36,10 +36,8 @@ class ExerciseManager(
         // todo: buggy, if same type pulled then addExersiseToSuperSet returns false and loop stops adding to superset
         for (i in 1..numSuperSets){
             var newSuperSet = SuperSet(numExercisesPerSuperSet)
-            var setHasRoom = true
             while (! newSuperSet.fullSet) {
                 newSuperSet.add(getRandomExercise())
-                //setHasRoom = newSuperSet.add(getRandomExercise())
             }
             wap.addSuperSet(newSuperSet)
         }

@@ -50,6 +50,7 @@ class SuperSet(val size: Int) {
 
 }
 
+// specifically for supersets
 class WorkoutPlan(
     val numSuperSets: Int,
     var superSets: MutableList<SuperSet> = mutableListOf<SuperSet>(),
@@ -65,8 +66,8 @@ class WorkoutPlan(
     fun addBurnout(exercise: Exercise){
         burnout = exercise
     }
-
     //todo read out method for style, personality
-
 }
+
+// class circuit
 

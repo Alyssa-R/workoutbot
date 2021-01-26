@@ -1,31 +1,39 @@
 WorkoutBot MVP flow:
 - Run workoutbot
-- Workoutbot randomly generates four supersets of two exercises
+- Workoutbot randomly generates x supersets of y exercises
     - Within the superset, the two exercises target different muscle groups
     - Workoutbot will not assign reps to the workout
 - Workoutbot returns the workout and instructions in a well-formatted text file
 
-class class enum
-APPLICAOTN
-@springbootapplication
-@configurationproertiesscan
 
-fun main
-    runApplication
-}
+CREATE TYPE muscle_group AS ENUM ('ARMS_SHOULDERS',
+                                  'BACK',
+                                  'CORE_FRONT', 'CORE_SIDE', 'CORE_BACK',
+                                  'FULL_BODY',
+                                  'LEGS_GLUTES');
 
-CONTROLLER
-@Controller
-class FICOntroller(
-    findimpressionscommandfactory, eventrecorder, mapper
-){
-    @PostMapping(blahbalh)
-    fun findImpressions(abc){
-    create and execute findimpressionsCommand
-    }
+CREATE TYPE equipment AS ENUM (     'WEIGHT_REQUIRED',
+                                    'WEIGHT_OPTIONAL',
+                                    'BODYWEIGHT_ONLY');
 
-}
+CREATE TABLE exercises (
+    id SERIAL PRIMARY KEY,
+    name    varchar(64) NOT NULL,
+    muscle_group muscle_group NOT NULL,
+    equipment equipment,
+    warm_up boolean,
+    burnout boolean);
 
-NAMESPACESERVICE
-@service
 
+https://developer.okta.com/blog/2018/12/13/build-basic-app-spring-boot-jpa
+
+todo:
+CREATE USER arnold
+ALTER USER arnold WITH ENCRYPTED PASSWORD PumpingIron1977
+GRANT ALL PRIVILEGES ON DATABASE arnold_db TO arnold;
+
+
+old application.properties
+spring.datasource.url=jdbc:postgresql://localhost/arnold_db
+                           spring.datasource.username=arivera
+                           spring.jpa.generate-ddl=false
